@@ -1,0 +1,39 @@
+{
+  "name": "smartwebschool",
+  "version": "1.0.0",
+  "description": "This is a demo Project to test the Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com"
+  },
+  "author": "sahu@santosh",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "bluebird": "^3.4.6",
+    "body-parser": "*",
+    "connect-flash": "^0.1.1",
+    "consolidate": "^0.14.1",
+    "cookie-parser": "*",
+    "debug": "*",
+    "express": "^4.14.0",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.14.2",
+    "express-validator": "^2.21.0",
+    "jade": "*",
+    "mongoose": "^4.6.6",
+    "mongoose-query-paginate": "^1.0.3",
+    "morgan": "*",
+    "nodemon": "^1.11.0",
+    "passport": "^0.3.2",
+    "passport-http": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "q": "^1.4.1",
+    "serve-favicon": "^2.3.0",
+    "swig": "^1.4.2"
+  }
+}

@@ -1,0 +1,15 @@
+{
+
+	 {"name" :"santosh"
+          "age" " 30",
+          "surname" :"sahu"
+         },
+         {  "name" :"raja"
+            "age" " 20",
+            "surname" :"sharma"
+         },
+         {  "name" :"santosh"
+            "age" " 20",
+            "surname" :"kumar"
+         }
+}
