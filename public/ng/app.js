@@ -80,6 +80,19 @@ angular.module("smartWebApp",[
             });
           }
         }
+      }).state('login',{
+        url:'/login',
+        templateUrl:'ng/directives/login/login.directive.html',
+        resolve: {
+          loadMyFiles:function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              name:'smartWebApp',
+              files:[
+              'ng/directives/login/login.js',
+              ]
+            });
+          }
+        }
       });
 	
              console.log("in app");
