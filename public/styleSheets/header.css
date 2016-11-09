@@ -1,0 +1,19 @@
+.fixedheader {
+	position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    color: #ffffff;
+    background: maroon;
+    padding: 39px 8px 0px 1px;
+}
+.fixedfooter {
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	color:#CCC;
+	background:#333;
+	border:1px solid #CCC;
+	padding:8px;
+}

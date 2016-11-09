@@ -45,7 +45,7 @@ angular.module("smartWebApp",[
               name:'smartWebApp',
               files:[
                     'ng/directives/home/home.js',
-                     'ng/directives/dashboard/sidebar/sidebar.js'
+                   
               ]
             });
           }
@@ -59,13 +59,15 @@ angular.module("smartWebApp",[
             return $ocLazyLoad.load({
               name:'smartWebApp',
               files:[
-              'ng/directives/dashboard/dashboard.js'
+              'ng/directives/dashboard/dashboard.js',
+              'ng/directives/dashboard/sidebar/sidebar.js',
+              'ng/directives/dashboard/header/header.js'
               ]
             });
           }
         }
       })
-      .state('home.userPlan',{
+      .state('home.dashboard.userPlan',{
         url:'/plan',
         templateUrl:'ng/directives/dashboard/userPlan/userPlan.directive.html',
         resolve: {
