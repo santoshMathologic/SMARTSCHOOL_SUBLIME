@@ -1,3 +1,3 @@
-angular.module("smartApp", []).controller("mainCtrl", function($scope) {
+angular.module("smartWebApp").controller("mainCtrl", function($scope) {
  
 });

@@ -1,4 +1,4 @@
-angular.module("smartApp", []).controller("userCtrl", function($scope) {
+angular.module("smartWebApp").controller("userCtrl", function($scope) {
     $scope.firstName = "john";
     $scope.lastName = "Doe";
 });
