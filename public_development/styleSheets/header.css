@@ -1,0 +1,21 @@
+.fixedheader {
+	position:fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    color: #ffffff;
+    background-color:#800000;
+    padding: 18px 0px 0px 0px;
+    border-bottom: 1px solid red;
+   
+}
+.fixedfooter {
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	color:#CCC;
+	background:#333;
+	border:1px solid #CCC;
+	padding:8px;
+}
