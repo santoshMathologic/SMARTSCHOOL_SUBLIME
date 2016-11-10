@@ -1,5 +1,6 @@
 String.prototype.Capitalize = function(){
-	return this.charAt(0).toUpperCase() + this.substring(1,this.length-1) + this.charAt(this.length-1).toUpperCase();
+	var str = this;
+	return str.charAt(0).toUpperCase() + str.substring(1,str.length-1) + str.charAt(str.length-1).toUpperCase();
 };
 String.prototype.FirstCapitalize=function(){return this.charAt(0).toUpperCase()+this.slice(1);};
 String.prototype.replaceParentHeader=function(find,replace)

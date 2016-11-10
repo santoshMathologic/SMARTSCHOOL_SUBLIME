@@ -63,6 +63,18 @@ gulp.task("assets",function(){
 
 });
 
+gulp.task("javascripts",function(){
+
+    return gulp.src(inputDirectoryPath + 'javascripts/**/*')
+    .pipe(concat('merge.all.js'))
+    .pipe(gulp.dest(outputDirectoryPath + 'javascripts'));
+
+          //var ass = gulp.src(inputDirectoryPath + 'javascripts/**/*').pipe(gulp.dest(outputDirectoryPath + 'javascripts'));
+          //return ass;
+
+
+});
+
 // Clean up: clean {{outputPath}}
 gulp.task('cleanDirecrory:' + outputDirectory, function () {
     return del.sync(outputDirectory);
@@ -111,7 +123,7 @@ gulp.task('useref', function () {
 
 gulp.task('build', function (callback) {
     runSequence('cleanDirecrory:' + outputDirectory,
-        ['stylesheets','useref', 'ng','bower_components','assets'],
+        ['stylesheets','useref', 'ng','bower_components','assets','javascripts'],
         callback
     );
 });
@@ -120,7 +132,7 @@ gulp.task('build', function (callback) {
 
 gulp.task('default', function (callback) {
      logMessage("inside default");
-      runSequence(['stylesheets', 'browserSync', 'watch','bower_components','assets'],
+      runSequence(['stylesheets', 'browserSync', 'watch','bower_components','assets','javascripts'],
         callback
     );
 });

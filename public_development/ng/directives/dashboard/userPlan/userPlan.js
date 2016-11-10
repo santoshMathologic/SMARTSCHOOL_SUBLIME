@@ -7,9 +7,18 @@ angular.module('smartWebApp')
 
             $scope.string = $state.current.name;
             $scope.string = $scope.string.replaceParentHeader('.', ' > ');
-            $scope.$parent.title = $scope.string;
+            $scope.title = $scope.string;
+            //var res = $scope.string.match(/>/g);
+            //$scope.string =  $scope.string.split(">");
+            //var strfull = [];
+
+             //for(var i = 0;i<$scope.string.length;i++){
+               //         strfull.push($scope.string[i].concat(res[0]));
+             //}
+           //$scope.$parent.title  = strfull;
               
-              console.log("DASDAS");
+                 //$scope.$parent.title = $scope.string[0].concat(res[0])+$scope.string[$scope.string.length-1];
+                            console.log("DASDAS");
                 
             }
 
