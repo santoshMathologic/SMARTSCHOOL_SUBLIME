@@ -80,7 +80,21 @@ angular.module("smartWebApp",[
             });
           }
         }
-      }).state('login',{
+      }).state('home.dashboard.user',{
+        url:'/user',
+        templateUrl:'ng/directives/dashboard/user/user.directive.html',
+        resolve: {
+          loadMyFiles:function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              name:'smartWebApp',
+              files:[
+              'ng/directives/dashboard/user/user.js'
+              ]
+            });
+          }
+        }
+      })
+      .state('login',{
         url:'/login',
         templateUrl:'ng/directives/login/login.directive.html',
         resolve: {
