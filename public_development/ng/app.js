@@ -61,7 +61,8 @@ angular.module("smartWebApp",[
               files:[
               'ng/directives/dashboard/dashboard.js',
               'ng/directives/dashboard/sidebar/sidebar.js',
-              'ng/directives/dashboard/header/header.js'
+              'ng/directives/dashboard/header/header.js',
+              'ng/utils/customConverter.js'
               ]
             });
           }
