@@ -1,0 +1,38 @@
+<h1>train</h1>
+
+<table class="table table-striped" st-pipe="ServerTableFetch.processFunction"
+						st-table="trainLists">
+						<thead>
+							<tr>
+								<th st-ratio="5" >S.No.</th>
+								<th st-ratio="30" st-sort="name">Crew Type Name</th>
+								<th st-ratio="10" >Actions</th>
+							</tr>
+							<tr>
+							<th>&nbsp;</th>
+								<th><input type="text" class="form-control" st-ratio="90" st-search="name"
+									placeholder="Crew Type Name" st-delay="1000" /></th>
+								<th>&nbsp;</th>
+							</tr>
+						</thead>
+							<tbody ng-show="!isLoading && (itemsPerPage)" >
+							<tr ng-repeat="crewType in trainLists">
+								<td>{{(itemsPerPage)? ((currentPage * itemsPerPage + $index +1)-itemsPerPage ):''}} </td>
+								<td>{{crewType.name}}</td>
+								
+							</tr>
+						</tbody>
+						<tbody ng-show="isLoading">
+							<tr>
+								<td colspan="4" class="text-center"><i class="fa fa-spinner fa-4x fa-pulse"> </i> Loading Data...</td>
+							</tr>
+						</tbody>
+
+						<tfoot>
+							<tr>
+								<td colspan="5" class="text-center">
+									
+								</td>
+							</tr>
+						</tfoot>
+					</table>

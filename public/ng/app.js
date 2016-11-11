@@ -6,7 +6,8 @@ angular.module("smartWebApp",[
     'ui.bootstrap',
     'angular-loading-bar',
     'toaster',
-    'ngCookies'
+    'ngCookies',
+    'smart-table'
 	]).factory('TokenInterceptor', function($q, $window,$location) {
     return {
         request: function(config) {
@@ -62,7 +63,10 @@ angular.module("smartWebApp",[
               'ng/directives/dashboard/dashboard.js',
               'ng/directives/dashboard/sidebar/sidebar.js',
               'ng/directives/dashboard/header/header.js',
-              'ng/utils/customConverter.js'
+              'ng/utils/customConverter.js',
+              'ng/utils/serverTableFetch.js'
+                
+                
               ]
             });
           }
@@ -90,6 +94,19 @@ angular.module("smartWebApp",[
               name:'smartWebApp',
               files:[
               'ng/directives/dashboard/user/user.js'
+              ]
+            });
+          }
+        }
+      }).state('home.dashboard.trains',{
+        url:'/train',
+        templateUrl:'ng/directives/dashboard/trains/train.directive.html',
+        resolve: {
+          loadMyFiles:function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              name:'smartWebApp',
+              files:[
+              'ng/directives/dashboard/trains/train.js'
               ]
             });
           }

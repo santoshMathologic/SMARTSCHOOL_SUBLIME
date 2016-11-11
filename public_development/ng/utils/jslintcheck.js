@@ -1,3 +1,6 @@
+/*jshint sub:true*/
+' use strict';
+
 var app = (function(){
 
 var foo = '12345';

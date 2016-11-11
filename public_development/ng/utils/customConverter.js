@@ -1,3 +1,6 @@
+/*jshint sub:true*/
+' use strict';
+
 String.prototype.Capitalize = function(){
 	var str = this;
 	return str.charAt(0).toUpperCase() + str.substring(1,str.length-1) + str.charAt(str.length-1).toUpperCase();
