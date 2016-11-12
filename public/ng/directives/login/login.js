@@ -4,8 +4,10 @@ angular.module('smartWebApp')
             restrict: 'E',
             templateUrl: 'ng/directives/login/login.tmpl.html',
             controller: function($scope, $state, $window, $location) {
-              
-              
+
+            		
+
+								
           
             }
 

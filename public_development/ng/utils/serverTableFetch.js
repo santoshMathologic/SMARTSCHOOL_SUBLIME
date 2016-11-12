@@ -32,8 +32,9 @@ var ServerTableFetch = function (url, http, callBackBefore,
     this.callBackAfterError = callBackAfterError;
 
 
-    this.processFunction = function (tableState) {
+    this.process = function (tableState) {
 
+        console.log(tableState);
         this.callBackBefore("CALL BACK BEFORE");
 
 
@@ -81,9 +82,9 @@ var ServerTableFetch = function (url, http, callBackBefore,
 
         }
         var query = {
-            order: 'trainNo',
-            perPage: 10,
-            page: 1
+            perPage:10,
+            page:1,
+            sortBy:"trainNo"
            
         };
 
@@ -91,6 +92,7 @@ var ServerTableFetch = function (url, http, callBackBefore,
             .then(function (response) {
 
                 var resultObj = response.data;
+                console.log(resultObj);
                 tableState.pagination.numberOfPages = response.data.last;
                 tableState.pagination.totalItemCount = response.data.count;
                 resultObj.tableState = tableState;
@@ -102,16 +104,12 @@ var ServerTableFetch = function (url, http, callBackBefore,
                 }
             }.bind(this));
 
-
-
     }.bind(this);
-
 };
 
 ServerTableFetch.prototype = {
     url: null,
-    subLinks: null,
-    SpringDataRestApi: null,
+    
     searchItems: null,
     resultObj: null,
     processFunction: null,

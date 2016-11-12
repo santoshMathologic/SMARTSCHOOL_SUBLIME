@@ -7,7 +7,9 @@ angular.module("smartWebApp",[
     'angular-loading-bar',
     'toaster',
     'ngCookies',
-    'smart-table'
+    'smart-table',
+    'ngResource',
+    'base64',
 	]).factory('TokenInterceptor', function($q, $window,$location) {
     return {
         request: function(config) {
@@ -115,12 +117,15 @@ angular.module("smartWebApp",[
       .state('login',{
         url:'/login',
         templateUrl:'ng/directives/login/login.directive.html',
+        controller:"loginCtrl",
         resolve: {
           loadMyFiles:function($ocLazyLoad) {
             return $ocLazyLoad.load({
               name:'smartWebApp',
               files:[
+              'ng/controller/login.js',
               'ng/directives/login/login.js',
+               'ng/factory/auth.js'
               ]
             });
           }
