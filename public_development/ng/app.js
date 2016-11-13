@@ -130,7 +130,25 @@ angular.module("smartWebApp",[
             });
           }
         }
+      })
+      .state('register',{
+        url:'/register',
+        templateUrl:'ng/directives/register/register.directive.html',
+        controller:"registerCtrl",
+        resolve: {
+          loadMyFiles:function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              name:'smartWebApp',
+              files:[
+              'ng/controller/register.js',
+              'ng/directives/register/register.js'
+               
+              ]
+            });
+          }
+        }
       });
+  
 	
              console.log("in app");
 
